@@ -7,14 +7,6 @@ export const getClonedElement = (
   iconSize: number,
   color?: number | ColorValue | undefined
 ) => {
-  /* const clonedElement = React.isValidElement(children)
-      ? React.cloneElement(children, {
-          // // color: unratedColor,
-          size,
-          style: { width: size, height: size },
-        })
-      : null; */
-
   let clonedElement: JSX.Element | null = null;
   if (children && React.isValidElement(children)) {
     // Current Child component

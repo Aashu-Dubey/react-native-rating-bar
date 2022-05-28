@@ -11,12 +11,7 @@ const NoRatingElement: React.FC<NoRatingProps> = ({
   unratedColor,
 }) => {
   const cloneChild = enableMask
-    ? getClonedElement(
-        children,
-        size,
-        // enableMask ? unratedColor : undefined,
-        unratedColor
-      )
+    ? getClonedElement(children, size, unratedColor)
     : children;
 
   return (
