@@ -32,6 +32,14 @@
     "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
+    "rating-bar",
+    "rating bar",
+    "rating",
+    "review",
+    "star",
+    "gestures",
+    "vector icons",
+    "vector-icons",
     "react-native",
     "ios",
     "android"

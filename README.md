@@ -2,14 +2,15 @@
     React Native Rating Bar
 </h1>
 
-A React Native component for generating and displaying interactive Tap or Swipe enabled Ratings supporting custom icons from [vector icons](https://github.com/oblador/react-native-vector-icons) and custom images.
+A React Native component for generating and displaying interactive Tap or Swipe enabled Ratings supporting custom icons from [vector icons](https://github.com/oblador/react-native-vector-icons) and images.
 
-<p align="center">
-  <a href="#-installation">Installation</a> •
-  <a href="#-usage">Usage</a> •
-  <a href="#-examples">Examples</a> •
-  <a href="./example">Demo</a>
-</p>
+<div align="center">
+
+[![npm](https://img.shields.io/npm/v/@aashu-dubey/react-native-rating-bar?style=flat-square)](https://www.npmjs.com/package/@aashu-dubey/react-native-rating-bar) [![Install Size](https://packagephobia.now.sh/badge?p=@aashu-dubey/react-native-rating-bar)](https://www.npmjs.com/package/@aashu-dubey/react-native-rating-bar)
+
+[Installation](#-installation) • [Usage](#-usage) • [Examples](#-examples) • [Demo](./example)
+
+</div>
 
 ## 🚀 Installation
 
