@@ -101,10 +101,10 @@ const RatingBar: React.FC<RatingBarProps> = ({
   const shadow = {
     shadowColor: glowColor,
     shadowOffset: { width: glowRadius, height: glowRadius },
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.5,
     shadowRadius: 10,
   };
-  const innerShadow = { ...shadow, shadowOpacity: 0.2 };
+  const innerShadow = { ...shadow, shadowOpacity: 0.4 };
 
   // Solution 2 only
   useEffect(() => {
@@ -327,11 +327,13 @@ const RatingBar: React.FC<RatingBarProps> = ({
     }
 
     const panGesture = Gesture.Pan()
+      .runOnJS(true)
       .onStart(onGestureStart)
       .onUpdate((e) => onGestureMove(e, index))
       .onEnd(onGestureEnd);
 
     const singleTap = Gesture.Tap()
+      .runOnJS(true)
       .maxDuration(250)
       .onStart((e) => onRatingTap(e, index));
 
