@@ -10,7 +10,7 @@ const getClonedElement = (children: React.ReactNode, size: number) =>
         // color: unratedColor,
         size,
         style: { width: size, height: size },
-      })
+      } as any)
     : null;
 
 const DISABLED_COLOR = 'rgba(0, 0, 0, 0.38)';
@@ -68,7 +68,7 @@ const RatingBarIndicator: React.FC<RatingBarIndicatorProps> = ({
                   color: unratedColor ?? DISABLED_COLOR,
                   size: itemSize,
                   style: { width: itemSize, height: itemSize },
-                });
+                } as any);
                 return clonedChild;
               }
               return itemClone;

@@ -1,24 +1,25 @@
 {
-  "name": "@aashu-dubey/react-native-rating-bar-example",
+  "name": "RatingBarExample",
   "description": "Example app for @aashu-dubey/react-native-rating-bar",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start"
+    "start": "react-native start",
+    "pods": "pod-install --quiet"
   },
   "dependencies": {
-    "@types/react-native-vector-icons": "^6.4.10",
-    "react": "17.0.2",
-    "react-native": "0.66.4",
-    "react-native-gesture-handler": "^2.4.2",
-    "react-native-vector-icons": "^9.1.0"
+    "@types/react-native-vector-icons": "^6.4.12",
+    "react": "18.1.0",
+    "react-native": "0.70.4",
+    "react-native-gesture-handler": "^2.8.0",
+    "react-native-vector-icons": "^9.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.18.3",
     "babel-plugin-module-resolver": "^4.1.0",
-    "metro-react-native-babel-preset": "^0.66.2"
+    "metro-react-native-babel-preset": "0.72.3"
   }
 }

@@ -1,6 +1,8 @@
 # Contributing
 
-We want this community to be friendly and respectful to each other. Please follow it in all your interactions with the project.
+Contributions are always welcome, no matter how large or small!
+
+We want this community to be friendly and respectful to each other. Please follow it in all your interactions with the project. Before contributing, please read the [code of conduct](./CODE_OF_CONDUCT.md).
 
 ## Development workflow
 
@@ -56,7 +58,6 @@ Remember to add tests for your change if possible. Run the unit tests by:
 ```sh
 yarn test
 ```
-
 ### Commit message convention
 
 We follow the [conventional commits specification](https://www.conventionalcommits.org/en) for our commit messages:

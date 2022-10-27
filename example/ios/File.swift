@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  ReactNativeRatingBarExample
+//  RatingBarExample
 //
 
 import Foundation
