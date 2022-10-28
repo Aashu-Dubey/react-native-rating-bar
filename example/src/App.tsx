@@ -13,6 +13,7 @@ import {
   Platform,
   useColorScheme,
   ColorValue,
+  StatusBar,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { RatingBar } from '@aashu-dubey/react-native-rating-bar';
@@ -91,12 +92,12 @@ export default function App() {
             direction={isVertical ? verticalMode : 'horizontal'}
             layoutDirection={isRtlMode ? 'rtl' : 'ltr'}
             allowHalfRating
-            unratedColor="rgba(255, 193, 7, 0.2)"
-            glowColor="#FFC107"
+            unratedColor="rgba(84, 211, 194, 0.2)"
+            glowColor="#54D3C2"
             itemCount={5}
             itemSize={50}
             itemPadding={4}
-            itemBuilder={() => mode1Item(selectedIcon ?? 'star', '#FFC107', 50)}
+            itemBuilder={() => mode1Item(selectedIcon ?? 'star', '#54D3C2', 50)}
             onRatingUpdate={onRatingUpdate}
             updateOnDrag
             // useSolution={2}
@@ -111,25 +112,25 @@ export default function App() {
             layoutDirection={isRtlMode ? 'rtl' : 'ltr'}
             allowHalfRating
             itemCount={5}
-            glowColor="#FFC107"
+            glowColor="#54D3C2"
             ratingElement={{
               full: (
                 <Image
-                  style={{ width: 30, height: 30, tintColor: '#FFC107' }}
+                  style={{ width: 30, height: 30, tintColor: '#54D3C2' }}
                   resizeMode="contain"
                   source={require('./assets/heart.png')}
                 />
               ),
               half: (
                 <Image
-                  style={{ width: 30, height: 30, tintColor: '#FFC107' }}
+                  style={{ width: 30, height: 30, tintColor: '#54D3C2' }}
                   resizeMode="contain"
                   source={require('./assets/heart_half.png')}
                 />
               ),
               empty: (
                 <Image
-                  style={{ width: 30, height: 30, tintColor: '#FFC107' }}
+                  style={{ width: 30, height: 30, tintColor: '#54D3C2' }}
                   resizeMode="contain"
                   source={require('./assets/heart_border.png')}
                 />
@@ -169,7 +170,7 @@ export default function App() {
         style={{ flex: 1, flexDirection: !androidRTL ? 'row' : 'row-reverse' }}
         textStyle={{ color: textColor, fontSize: 12, fontWeight: '300' }}
         title={title}
-        radioColor="#FFC107"
+        radioColor="#54D3C2"
         isSelected={isSelected}
         onSelectionChange={onChange}
       />
@@ -196,8 +197,8 @@ export default function App() {
           {title}
         </Text>
         <Switch
-          trackColor={{ false: 'darkgrey', true: '#FFE082' }}
-          thumbColor={switchBool ? '#FFC107' : 'white'}
+          trackColor={{ false: 'darkgrey', true: '#09A599' }}
+          thumbColor={switchBool ? '#54D3C2' : 'white'}
           ios_backgroundColor="darkgrey"
           onValueChange={onValueChange}
           value={switchBool}
@@ -208,7 +209,8 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <SafeAreaView style={{ flex: 0, backgroundColor: '#FFC107' }} />
+      <StatusBar backgroundColor="rgb(81, 173, 133)" />
+      <SafeAreaView style={{ flex: 0, backgroundColor: 'rgb(81, 173, 133)' }} />
       <SafeAreaView
         style={{
           flex: 1,
@@ -335,8 +337,8 @@ const styles = StyleSheet.create({
   headerContainer: {
     height: 52,
     flexDirection: 'row',
-    backgroundColor: '#FFC107',
-    // backgroundColor: 'rgb(81, 173, 133)',
+    // backgroundColor: '#FFC107',
+    backgroundColor: 'rgb(81, 173, 133)',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
