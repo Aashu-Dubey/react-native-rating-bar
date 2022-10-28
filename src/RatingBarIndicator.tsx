@@ -141,6 +141,8 @@ const RatingBarIndicator: React.FC<RatingBarIndicatorProps> = ({
       }}
       horizontal={direction === 'horizontal'}
       showsHorizontalScrollIndicator={false}
+      alwaysBounceHorizontal={false}
+      alwaysBounceVertical={false}
     >
       {ratingArr.map((_, i) => {
         // TODO:- this seems unneccessary now
