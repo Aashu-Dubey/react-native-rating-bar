@@ -15,10 +15,10 @@ import {
 import {
   Gesture,
   GestureDetector,
-  GestureStateChangeEvent,
-  GestureUpdateEvent,
-  PanGestureHandlerEventPayload,
-  TapGestureHandlerEventPayload,
+  type GestureStateChangeEvent,
+  type GestureUpdateEvent,
+  type PanGestureHandlerEventPayload,
+  type TapGestureHandlerEventPayload,
 } from 'react-native-gesture-handler';
 import HalfRatingElement from './components/HalfRatingElement';
 import NoRatingElement from './components/NoRatingElement';
@@ -101,7 +101,8 @@ const RatingBar: React.FC<RatingBarProps> = ({
   const shadow = {
     shadowColor: glowColor,
     shadowOffset: { width: glowRadius, height: glowRadius },
-    shadowOpacity: 0.5,
+    // Conditionally adding the style was causing improper behaviour with Pan Gesture, so show/hide(ing) glow conditionally here
+    shadowOpacity: shouldGlow ? 0.5 : 0,
     shadowRadius: 10,
   };
   const innerShadow = { ...shadow, shadowOpacity: 0.4 };
@@ -327,13 +328,13 @@ const RatingBar: React.FC<RatingBarProps> = ({
     }
 
     const panGesture = Gesture.Pan()
-      .runOnJS(true)
+      // .runOnJS(true)
       .onStart(onGestureStart)
       .onUpdate((e) => onGestureMove(e, index))
       .onEnd(onGestureEnd);
 
     const singleTap = Gesture.Tap()
-      .runOnJS(true)
+      // .runOnJS(true)
       .maxDuration(250)
       .onStart((e) => onRatingTap(e, index));
 
@@ -341,7 +342,8 @@ const RatingBar: React.FC<RatingBarProps> = ({
       <View
         key={index}
         style={[
-          shouldGlow && shadow,
+          // shouldGlow && shadow,
+          shadow,
           typeof rateStyles?.starContainer === 'function'
             ? rateStyles?.starContainer(index)
             : rateStyles?.starContainer,
@@ -435,10 +437,10 @@ const RatingBar: React.FC<RatingBarProps> = ({
   const flexDirection = isVerticalReverse
     ? 'column-reverse'
     : isVertical
-    ? 'column'
-    : androidRTL
-    ? 'row-reverse'
-    : 'row';
+      ? 'column'
+      : androidRTL
+        ? 'row-reverse'
+        : 'row';
 
   const renderRating = () => {
     return (

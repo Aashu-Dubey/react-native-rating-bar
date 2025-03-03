@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import {
   View,
   StyleSheet,
@@ -12,10 +12,10 @@ import {
   I18nManager,
   Platform,
   useColorScheme,
-  ColorValue,
+  type ColorValue,
   StatusBar,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from '@expo/vector-icons/MaterialIcons';
 import { RatingBar } from '@aashu-dubey/react-native-rating-bar';
 import { RatingBarIndicator } from '@aashu-dubey/react-native-rating-bar';
 import RadioBtn from './components/RadioBtn';
@@ -32,7 +32,8 @@ export default function App() {
   const [verticalMode, setVerticalMode] = useState<
     'vertical' | 'vertical-reverse'
   >('vertical');
-  const [selectedIcon, setSelectedIcon] = useState('star');
+  const [selectedIcon, setSelectedIcon] =
+    useState<keyof typeof Icon.glyphMap>('star');
   const [showAlert, setShowAlert] = useState(false);
 
   const textColor = useMemo(
@@ -49,7 +50,7 @@ export default function App() {
     [selectedIcon]
   ); */
   const mode1Item = useCallback(
-    (name: string, color: ColorValue, size?: number) => (
+    (name: keyof typeof Icon.glyphMap, color: ColorValue, size?: number) => (
       <Icon {...{ name, color, size }} />
     ),
     []
@@ -208,7 +209,7 @@ export default function App() {
   };
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView>
       <StatusBar backgroundColor="rgb(81, 173, 133)" />
       <SafeAreaView style={{ flex: 0, backgroundColor: 'rgb(81, 173, 133)' }} />
       <SafeAreaView

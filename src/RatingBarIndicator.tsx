@@ -133,10 +133,10 @@ const RatingBarIndicator: React.FC<RatingBarIndicatorProps> = ({
         flexDirection: isVerticalReverse
           ? 'column-reverse'
           : isVertical
-          ? 'column'
-          : androidRTL
-          ? 'row-reverse'
-          : 'row',
+            ? 'column'
+            : androidRTL
+              ? 'row-reverse'
+              : 'row',
         direction: isRTL ? 'rtl' : 'ltr',
       }}
       horizontal={direction === 'horizontal'}
