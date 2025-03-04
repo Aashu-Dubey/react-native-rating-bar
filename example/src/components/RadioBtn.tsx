@@ -5,10 +5,10 @@ import {
   StyleSheet,
   Text,
   Animated,
-  ViewStyle,
-  StyleProp,
-  TextStyle,
-  ColorValue,
+  type ViewStyle,
+  type StyleProp,
+  type TextStyle,
+  type ColorValue,
 } from 'react-native';
 
 interface Props {

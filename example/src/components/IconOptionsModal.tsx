@@ -9,12 +9,12 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from '@expo/vector-icons/MaterialIcons';
 
 interface IconsModalProps {
   show: boolean;
   setShow: (show: boolean) => void;
-  onIconSelected: (icon: string) => void;
+  onIconSelected: (icon: keyof typeof Icon.glyphMap) => void;
 }
 
 const IconOptionsModal: React.FC<IconsModalProps> = ({
@@ -24,7 +24,7 @@ const IconOptionsModal: React.FC<IconsModalProps> = ({
 }) => {
   const colorScheme = useColorScheme();
 
-  const iconButton = (icon: string) => (
+  const iconButton = (icon: keyof typeof Icon.glyphMap) => (
     <Pressable
       style={{ flex: 1, alignItems: 'center', padding: 8, marginVertical: 8 }}
       onPress={() => onIconSelected(icon)}
