@@ -39,6 +39,7 @@ jobs:
         run: yarn release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish-npmjs:
     name: Publish package to npmjs
