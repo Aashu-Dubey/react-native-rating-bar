@@ -122,7 +122,8 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true
+      "publish": true,
+      "publishArgs": ["--provenance"]
     },
     "github": {
       "release": true
