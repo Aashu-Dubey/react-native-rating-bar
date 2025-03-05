@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.3.0](https://github.com/Aashu-Dubey/react-native-rating-bar/compare/v0.2.0...v0.3.0) - 06-03-2025
+
+✨ Improvements
+- Upgraded package to react-native v0.76.7 ([ec5dca0](https://github.com/Aashu-Dubey/react-native-rating-bar/commit/ec5dca0bf2ae0909bf946b3f804aef46fa52d383))
+
+🐛 Bug Fixes
+
+- Fixed rating bar Pan gesture issue on iOS. ([ec5dca0](https://github.com/Aashu-Dubey/react-native-rating-bar/commit/ec5dca0bf2ae0909bf946b3f804aef46fa52d383#diff-c0ee9d2e31b341fc0472a19a4fe2e0f07c51b5ce6a6d93cb670f3814244c6782)).
+
 ## [v0.2.0](https://github.com/Aashu-Dubey/react-native-rating-bar/compare/v0.1.0...v0.2.0) - 29-10-2022
 
 🐛 Bug Fixes

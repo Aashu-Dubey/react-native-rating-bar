@@ -328,13 +328,13 @@ const RatingBar: React.FC<RatingBarProps> = ({
     }
 
     const panGesture = Gesture.Pan()
-      // .runOnJS(true)
+      .runOnJS(true)
       .onStart(onGestureStart)
       .onUpdate((e) => onGestureMove(e, index))
       .onEnd(onGestureEnd);
 
     const singleTap = Gesture.Tap()
-      // .runOnJS(true)
+      .runOnJS(true)
       .maxDuration(250)
       .onStart((e) => onRatingTap(e, index));
 
