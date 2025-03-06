@@ -68,7 +68,9 @@ jobs:
         run: yarn prepare
 
       - name: git status
-        run: git status
+        run: |
+          git status
+          git diff package.json
 
       - name: Publish Package
         run: yarn release
