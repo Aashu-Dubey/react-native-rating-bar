@@ -68,7 +68,7 @@ jobs:
         run: yarn prepare
 
       - name: Publish Package
-        run: yarn release
+        run: yarn release -- --no-increment --no-github.release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
