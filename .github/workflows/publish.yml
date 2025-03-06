@@ -67,6 +67,9 @@ jobs:
       - name: Build the plugin
         run: yarn prepare
 
+      - name: git status
+        run: git status
+
       - name: Publish Package
         run: yarn release
         env:
