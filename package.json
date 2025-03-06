@@ -118,6 +118,7 @@
   },
   "release-it": {
     "git": {
+      "commit": false,
       "commitMessage": "chore: release ${version}",
       "tagName": "v${version}"
     },
