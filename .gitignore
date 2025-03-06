@@ -84,6 +84,3 @@ android/generated
 
 # React Native Nitro Modules
 nitrogen/
-
-# CI/CD created this before publishing package, and release-it need clean directory before publishing
-.npmrc

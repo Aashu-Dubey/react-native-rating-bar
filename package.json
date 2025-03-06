@@ -1,6 +1,6 @@
 {
   "name": "@aashu-dubey/react-native-rating-bar",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "A React Native component for generating and displaying interactive Tap or Swipe enabled Ratings.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -119,11 +119,16 @@
   "release-it": {
     "git": {
       "commit": false,
+      "tag": false,
+      "push": false,
       "commitMessage": "chore: release ${version}",
       "tagName": "v${version}"
     },
     "npm": {
       "publish": true,
+      "versionArgs": [
+        "--allow-same-version"
+      ],
       "publishArgs": [
         "--provenance"
       ]
