@@ -124,7 +124,9 @@
     },
     "npm": {
       "publish": true,
-      "publishArgs": ["--provenance"]
+      "publishArgs": [
+        "--provenance"
+      ]
     },
     "github": {
       "release": true
